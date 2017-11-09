@@ -21,6 +21,10 @@
     background-image: url(assets/startside/startside.svg);
 }
 
-.dreng_vaerelse {
-    background-image: url(assets/V%25C3%25A6relser/dreng_v%C3%A6relse.svg);
+.dreng_room {
+    background-image: url(assets/rooms/dreng_room.svg);
+}
+
+.pige_room {
+    background-image: url(assets/rooms/pige_room.svg)
 }
