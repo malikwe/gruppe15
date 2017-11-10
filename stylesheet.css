@@ -21,7 +21,7 @@
 /** BAGGRUND START **/
 
 .startsite {
-    background-image: url(assets/startside/startside.svg);
+    background-image: url(assets/startside/startside1.svg);
 }
 
 .dreng_room {
@@ -71,3 +71,18 @@
 
 
 /** DRENG ANIMATION SLUT **/
+
+
+/** SPILLET STARTER **/
+
+.tryk_start {
+    background-image: url(assets/afslutning/tryk_start.svg);
+}
+
+.antal_delinger {
+    background-image: url(assets/afslutning/antal_delinger.svg);
+}
+
+/** SPILLET SLUT **/
+
+
