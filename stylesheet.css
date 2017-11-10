@@ -32,6 +32,20 @@
     background-image: url(assets/rooms/pige_room.svg);
 }
 
+.justin {
+    position: absolute;
+    background-image: url(assets/rooms/JB.jpg);
+    background-size: 100%;
+    z-index: 3;
+    height: 19.85vw;
+    width: 30vw;
+}
+
+#justin {
+    top: 3vw;
+    left: 9vw;
+}
+
 
 /** BAGGRUND SLUT **/
 
