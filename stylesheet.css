@@ -28,3 +28,11 @@
 .pige_room {
     background-image: url(assets/rooms/pige_room.svg)
 }
+
+.vidste_du {
+    background-image: url(assets/startside/vidste_du-01.svg);
+}
+
+.billede_delt {
+    background-image: url(assets/startside/billede_delt-01.svg);
+}
