@@ -55,6 +55,23 @@
 
 /*MICHALA*/
 
+.pige_start {
+    animation-name: start_kf;
+    animation-duration: 1s;
+    /**animation-fill-mode:**/
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes start_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 #pige_container {
     position: absolute;
     z-index: 3;
