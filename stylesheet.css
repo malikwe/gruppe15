@@ -27,7 +27,7 @@
     }
 
     .pige_room {
-        background-image: url(assets/rooms/pige_room.svg)
+        background-image: url(assets/rooms/pige_room.svg);
     }
     /** BAGGRUND SLUT **/
     /** PIGE ANIMATION START **/
@@ -73,4 +73,45 @@
     }
     /** PIGE ANIMATION SLUT **/
     /** DRENG ANIMATION START **/
+
+    #dreng_container {
+        position: absolute;
+        z-index: 3;
+    }
+
+    #dreng_sprite {
+        position: absolute;
+        width: 35vw;
+        height: 44.5vw;
+        background-image: url(assets/dreng_animation/Dreng_sprite-11.svg);
+        background-size: 400% 400%;
+    }
+
+    .dreng_startposition {
+        top: 15%;
+        left: 35%;
+    }
+
+    .dreng_noegen {
+        background-position: 0 -100%;
+    }
+
+    .dreng_tagerbillede {
+        animation-name: tagerbillede_kf;
+        animation-duration: 1s;
+        /**animation-fill-mode:**/
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(2);
+    }
+
+    @keyframes tagerbillede_kf {
+        0% {
+            background-position: 0% -100%;
+        }
+        100% {
+            background-position: -200% -100%;
+        }
+    }
+
+
     /** DRENG ANIMATION SLUT **/
