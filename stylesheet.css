@@ -7,18 +7,21 @@
     width: 100vw;
     height: 56.25vw;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #baggrund {
     width: 100vw;
     height: 56.25vw;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }
 
+
+/** BAGGRUND START **/
+
 .startsite {
-    background-image: url(assets/startside/startside.svg);
+    background-image: url(assets/startside/startside1.svg);
 }
 
 .dreng_room {
@@ -26,5 +29,98 @@
 }
 
 .pige_room {
-    background-image: url(assets/rooms/pige_room.svg)
+    background-image: url(assets/rooms/pige_room.svg);
 }
+
+.justin {
+    position: absolute;
+    background-image: url(assets/rooms/JB.jpg);
+    background-size: 100%;
+    z-index: 3;
+    height: 19.85vw;
+    width: 30vw;
+}
+
+#justin {
+    top: 3vw;
+    left: 9vw;
+}
+
+
+/** BAGGRUND SLUT **/
+
+
+/** PIGE ANIMATION START **/
+
+
+/*MICHALA*/
+
+#pige_container {
+    position: absolute;
+    z-index: 3;
+}
+
+#pige_sprite {
+    position: absolute;
+    width: 35vw;
+    height: 44.5vw;
+    background-image: url(assets/pige_animation/pige_sprite.svg);
+    background-size: 200% 300%;
+}
+
+.pige_startposition {
+    top: 15%;
+    left: 40%;
+}
+
+.pige_noegen {
+    background-position: 0 -100%;
+}
+
+.pige_tagerbillede {
+    animation-name: tagerbillede_kf;
+    animation-duration: 1s;
+    /**animation-fill-mode:**/
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes tagerbillede_kf {
+    0% {
+        background-position: 0% -100%;
+    }
+    100% {
+        background-position: -200% -100%;
+    }
+}
+
+
+/** PIGE ANIMATION SLUT **/
+
+
+/** DRENG ANIMATION START **/
+
+
+/** DRENG ANIMATION SLUT **/
+
+
+/** SPILLET STARTER **/
+
+.tryk_start {
+    background-image: url(assets/afslutning/tryk_start.svg);
+}
+
+.antal_delinger {
+    background-image: url(assets/afslutning/antal_delinger.svg);
+}
+
+.vidste_du {
+    background-image: url(assets/startside/vidste_du-01.svg);
+}
+
+.billede_delt {
+    background-image: url(assets/startside/billede_delt-01.svg);
+}
+
+
+/** SPILLET SLUT **/
