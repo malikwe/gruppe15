@@ -50,6 +50,9 @@
 /** BAGGRUND SLUT **/
 
 
+/** BAGGRUND SLUT **/
+
+
 /** PIGE ANIMATION START **/
 
 
@@ -61,11 +64,37 @@
 }
 
 #pige_sprite {
-    position: absolute;
-    width: 35vw;
-    height: 44.5vw;
-    background-image: url(assets/pige_animation/pige_sprite.svg);
+    background-image: url(assets/pige_animation/pige_sprite_endelig.svg);
     background-size: 200% 300%;
+}
+
+.pige_startskaerm {
+    top: 12%;
+    left: 5%
+}
+
+.pige_start {
+    width: 30vw;
+    height: 38.1vw;
+}
+
+.pige_forside {
+    width: 30vw;
+    height: 38.1vw;
+    animation-name: start_kf;
+    animation-duration: 1s;
+    /**animation-fill-mode:**/
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(2);
+}
+
+@keyframes start_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
 }
 
 .pige_startposition {
@@ -75,12 +104,15 @@
 
 .pige_noegen {
     background-position: 0 -100%;
+    width: 35vw;
+    height: 44.5vw;
 }
 
 .pige_tagerbillede {
+    width: 35vw;
+    height: 44.5vw;
     animation-name: tagerbillede_kf;
     animation-duration: 1s;
-    /**animation-fill-mode:**/
     animation-iteration-count: infinite;
     animation-timing-function: steps(2);
 }
@@ -88,6 +120,9 @@
 @keyframes tagerbillede_kf {
     0% {
         background-position: 0% -100%;
+    }
+    100% {
+        background-position: -200% -100%;
     }
 }
 
@@ -103,6 +138,7 @@
 }
 
 #dreng_sprite {
+    position: absolute;
     background-image: url(assets/dreng_animation/Dreng_sprite-11.svg);
     background-size: 400% 400%;
 }
@@ -113,6 +149,15 @@
 .dreng_vaerelse {
     top: 15%;
     left: 38%;
+}
+
+.dreng_startposition {
+    top: 15%;
+    left: 35%;
+}
+
+.dreng_noegen {
+    background-position: 0 -100%;
 }
 
 .dreng_tagerbillede {
@@ -164,11 +209,47 @@
 }
 
 
-/** DRENG PÅ STARTSKÆRM SLUT **/
+/** DRENG ANIMATION SLUT **/
 
-.dreng_noegen {
-    background-position: 0 -100%;
+
+/** SNAPCHAT ANIMATION START **/
+
+#iphone_container {
+    position: absolute;
+    z-index: 3;
 }
+
+#iphone_sprite {
+    background-image: url(assets/snapchat/Snapchat_animation_pige_endelig-01.svg);
+    background-size: 400%;
+}
+
+.iphone_placering {
+    top: 10%;
+    left: 30vw;
+}
+
+.snapchat_send {
+    width: 100vw;
+    height: 56.22vw;
+    animation-name: snap_sendes_kf;
+    animation-duration: 5s;
+    /**animation-fill-mode:**/
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+@keyframes snap_sendes_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+
+/** SNAPCHAT ANIMATION SLUT **/
 
 
 /** SPILLET STARTER **/
@@ -187,6 +268,82 @@
 
 .billede_delt {
     background-image: url(assets/startside/billede_delt-01.svg);
+}
+
+.spilside {
+    background-image: url(assets/kort.png);
+    background-size: 100%
+}
+
+.trykstartside {
+    background-image: url(assets/afslutning/tryk_start.svg);
+}
+
+#spil {
+    width: 90vw;
+    height: 90vw;
+    position: absolute;
+    margin: auto 0;
+}
+
+.trykstart {
+    position: absolute;
+    width: 35vw;
+    height: 18vw;
+    left: 31%;
+    top: 61%;
+    z-index: 3;
+}
+
+#haander {
+    width: 10vw;
+    height: 8vw;
+}
+
+.haandVis {
+    background-image: url(assets/Asset%201@0.5x.png);
+    position: absolute;
+    z-index: 4;
+    background-size: 600%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 7vw;
+    height: 10vw;
+}
+
+.haand1 {
+    background-position: 0%;
+}
+
+.haand2 {
+    background-position: -100%;
+}
+
+.haand3 {
+    background-position: -200%;
+}
+
+.haand4 {
+    background-position: -300%;
+}
+
+.haand5 {
+    background-position: -400%;
+}
+
+.haand6 {
+    background-position: -500%;
+}
+
+.haand_kopi {
+    background-image: url(assets/delinger/nude1.png);
+    position: absolute;
+    z-index: 4;
+    background-size: 100%;
+    position: absolute;
+    width: 10vw;
+    height: 8vw;
 }
 
 
