@@ -168,8 +168,6 @@
 #iphone_sprite {
     background-image: url(assets/snapchat/Snapchat_animation_pige_endelig-01.svg);
     background-size: 400%;
-    width: 100vw;
-    height: 56.22vw;
 }
 
 .iphone_placering {
@@ -177,9 +175,9 @@
     left: 30vw;
 }
 
-.iphone_size {}
-
 .snapchat_send {
+    width: 100vw;
+    height: 56.22vw;
     animation-name: snap_sendes_kf;
     animation-duration: 5s;
     /**animation-fill-mode:**/
