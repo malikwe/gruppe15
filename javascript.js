@@ -1,5 +1,5 @@
 var antalKlik = 0;
-$(window).on("load", tilIphone);
+$(window).on("load", sidenErLoadet);
 
 function sidenErLoadet() {
     console.log("siden er loadet");
@@ -67,16 +67,20 @@ function startHistorie() {
 
     $("#iphone_container").off("animationend", startHistorie);
 
-    $("#dreng_sprite").addClass("dreng_overrasket");
+
     $("#dreng_container").addClass("dreng_overrasket_position");
     $("#dreng_sprite").addClass("dreng_overrasket_animation");
-
+    $("#dreng_sprite").addClass("dreng_overrasket");
     $("#baggrund").addClass("trykstartside");
     $(".trykstart").on("click", startSpil);
 }
 
 function startSpil() {
     console.log("spilstarted");
+    $("#dreng_container").removeClass("dreng_overrasket_position");
+    $("#dreng_sprite").removeClass("dreng_overrasket_animation");
+    $("#dreng_sprite").removeClass("dreng_overrasket");
+    $("#baggrund").removeClass("trykstartside")
     $(".trykstart").off("click", startSpil);
     $(".trykstart").hide();
 

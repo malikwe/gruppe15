@@ -283,6 +283,39 @@
 
 /** DRENG SNAPCHAT ANIMATION SLUT **/
 
+/** DRENG OVERRASKET START **/
+
+.dreng_overrasket_position {
+    top: 22%;
+    left: 0%;
+}
+
+.dreng_overrasket {
+    background-position: -100% -300%;
+}
+
+.dreng_overrasket_animation {
+    width: 34.5vw;
+    height: 44.0vw;
+    animation-name: overrasket_kf;
+    animation-duration: 1s;
+    /**animation-fill-mode:**/
+    animation-timing-function: steps(2);
+    animation-iteration-count: 1;
+}
+
+@keyframes overrasket_kf {
+    0% {
+        background-position: 0% -300%;
+    }
+    100% {
+        background-position: -200% -300%;
+    }
+}
+
+
+/** DRENG OVERRASKET SLUT **/
+
 /** SPILLET STARTER **/
 
 .tryk_start {
