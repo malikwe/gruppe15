@@ -21,7 +21,7 @@
 /** BAGGRUND START **/
 
 .pige_room {
-    background-image: url(assets/rooms/pige_room.svg);
+    background-image: url(assets/rooms/pige_room1.svg);
 }
 
 .dreng_room {
@@ -212,7 +212,7 @@
 /** DRENG ANIMATION SLUT **/
 
 
-/** SNAPCHAT ANIMATION START **/
+/**  PIGE SNAPCHAT ANIMATION START **/
 
 #iphone_container {
     position: absolute;
@@ -235,7 +235,7 @@
     animation-name: snap_sendes_kf;
     animation-duration: 5s;
     /**animation-fill-mode:**/
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: steps(4);
 }
 
@@ -249,8 +249,45 @@
 }
 
 
-/** SNAPCHAT ANIMATION SLUT **/
+/** PIGE SNAPCHAT ANIMATION SLUT **/
 
+/** DRENG SNAPCHAT ANIMATION **/
+ #iphone_container {
+    position: absolute;
+    z-index: 3;
+}
+
+#iphone_sprite {
+    background-image: url(assets/snapchat/Snapchat-animation_dreng.svg);
+    background-size: 400%;
+}
+
+.iphone_placering {
+    top: 10%;
+    left: 30vw;
+}
+
+.snapchat_send {
+    width: 100vw;
+    height: 56.22vw;
+    animation-name: snap_sendes_kf;
+    animation-duration: 5s;
+    /**animation-fill-mode:**/
+     animation-iteration-count: 1;
+    animation-timing-function: steps(4);
+}
+
+@keyframes snap_sendes_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+
+/** DRENG SNAPCHAT ANIMATION SLUT **/
 
 /** SPILLET STARTER **/
 
