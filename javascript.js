@@ -1,43 +1,75 @@
 var antalKlik = 0;
-$(window).on("load", startHistorie);
+$(window).on("load", tilIphone);
 
 function sidenErLoadet() {
     console.log("siden er loadet");
+
+    $("#baggrund").addClass("startsite");
+    $("#dreng_container").addClass("dreng_startposition1");
+    $("#dreng_sprite").addClass("dreng_startanimation");
+    $("#pige_container").addClass("pige_startskaerm");
+    $("#pige_sprite").addClass("pige_forside");
+
+    $(".trykdreng").on("click", vedKlikDreng);
+
+
 
 }
 
 function vedKlikDreng() {
     console.log("Der er blevet klikket på drengen")
 
+    $("#baggrund").removeClass("startsite");
+    $("#dreng_container").removeClass("dreng_startposition1");
+    $("#dreng_sprite").removeClass("dreng_startanimation");
+    $("#pige_container").removeClass("pige_startskaerm");
+    $("#pige_sprite").removeClass("pige_forside");
+
+    $(".trykdreng").off("click", vedKlikDreng);
+
+    $("#baggrund").addClass("dreng_room");
+    $("#dreng_sprite").addClass("dreng_noegen");
+
+    $("#dreng_container").addClass("dreng_startposition");
+    $("#dreng_sprite").addClass("dreng_tagerbillede");
+
+    $("#dreng_container").on("animationend", tilIphone);
+
+
+
+
 }
 
 function tilIphone() {
     console.log("Iphone vinkel")
+    $("#baggrund").removeClass("dreng_room");
+    $("#dreng_sprite").removeClass("dreng_noegen");
+
+    $("#dreng_container").removeClass("dreng_startposition");
+    $("#dreng_sprite").removeClass("dreng_tagerbillede");
+
+    $("#dreng_container").off("animationend", tilIphone);
+
+    $("#iphone_container").addClass("iphone_placering");
+    $("#iphone_sprite").addClass("snapchat_send");
+
+    $("#iphone_container").on("animationend", startHistorie);
 
 }
 
-function vedKlikSend() {
-    console.log("Sender")
 
-}
-
-function efterLydSendt() {
-    console.log("Screenshot bliver taget")
-
-}
-
-function efterAnimationScreenshot() {
-    console.log("Dreng chokeret")
-
-}
-
-function efterLydGisp() {
-    console.log("Spil side 1")
-
-}
 
 function startHistorie() {
     console.log("tryk på start");
+
+    $("#iphone_container").removeClass("iphone_placering");
+    $("#iphone_sprite").removeClass("snapchat_send");
+
+    $("#iphone_container").off("animationend", startHistorie);
+
+    $("#dreng_sprite").addClass("dreng_overrasket");
+    $("#dreng_container").addClass("dreng_overrasket_position");
+    $("#dreng_sprite").addClass("dreng_overrasket_animation");
 
     $("#baggrund").addClass("trykstartside");
     $(".trykstart").on("click", startSpil);

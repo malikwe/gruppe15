@@ -160,8 +160,8 @@
     animation-name: tagerbillede_kf;
     animation-duration: 1s;
     /**animation-fill-mode:**/
-    animation-iteration-count: infinite;
     animation-timing-function: steps(2);
+    animation-delay: 1.5s;
 }
 
 @keyframes tagerbillede_kf {
@@ -213,7 +213,7 @@
     z-index: 3;
 }
 
-#iphone_sprite {
+#iphone_sprite_pige {
     background-image: url(assets/snapchat/Snapchat_animation_pige_endelig-01.svg);
     background-size: 400%;
 }
