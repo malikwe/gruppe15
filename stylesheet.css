@@ -21,7 +21,7 @@
 /** BAGGRUND START **/
 
 .pige_room {
-    background-image: url(assets/rooms/pige_room.svg);
+    background-image: url(assets/rooms/pige_room1.svg);
 }
 
 .dreng_room {
@@ -49,12 +49,7 @@
 
 /** BAGGRUND SLUT **/
 
-
-/** BAGGRUND SLUT **/
-
-
 /** PIGE ANIMATION START **/
-
 
 /*MICHALA*/
 
@@ -129,7 +124,6 @@
 
 /** PIGE ANIMATION SLUT **/
 
-
 /** DRENG ANIMATION START **/
 
 #dreng_container {
@@ -182,7 +176,6 @@
 
 /** DRENG PÅ VÆRELSE SLUT **/
 
-
 /** DRENG PÅ STARTSKÆRM START **/
 
 .dreng_startposition1 {
@@ -211,8 +204,9 @@
 
 /** DRENG ANIMATION SLUT **/
 
-
 /** SNAPCHAT ANIMATION START **/
+
+/**  PIGE SNAPCHAT ANIMATION START **/
 
 #iphone_container {
     position: absolute;
@@ -235,7 +229,7 @@
     animation-name: snap_sendes_kf;
     animation-duration: 5s;
     /**animation-fill-mode:**/
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: steps(4);
 }
 
@@ -249,8 +243,45 @@
 }
 
 
-/** SNAPCHAT ANIMATION SLUT **/
+/** PIGE SNAPCHAT ANIMATION SLUT **/
 
+/** DRENG SNAPCHAT ANIMATION **/
+
+#iphone_container {
+    position: absolute;
+    z-index: 3;
+}
+
+#iphone_sprite {
+    background-image: url(assets/snapchat/Snapchat-animation_dreng.svg);
+    background-size: 400%;
+}
+
+.iphone_placering {
+    top: 10%;
+    left: 30vw;
+}
+
+.snapchat_send {
+    width: 100vw;
+    height: 56.22vw;
+    animation-name: snap_sendes_kf;
+    animation-duration: 5s;
+    /**animation-fill-mode:**/
+    animation-iteration-count: 1;
+    animation-timing-function: steps(4);
+}
+
+@keyframes snap_sendes_kf {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: -400%;
+    }
+}
+
+/** DRENG SNAPCHAT ANIMATION SLUT **/
 
 /** SPILLET STARTER **/
 
@@ -295,6 +326,24 @@
     z-index: 3;
 }
 
+.trykdreng {
+    position: absolute;
+    width: 20vw;
+    height: 8vw;
+    left: 59%;
+    top: 80%;
+    z-index: 3;
+}
+
+.trykpige {
+    position: absolute;
+    width: 20vw;
+    height: 8vw;
+    left: 20%;
+    top: 80%;
+    z-index: 3;
+}
+
 #haander {
     width: 10vw;
     height: 8vw;
@@ -302,6 +351,18 @@
 
 .haandVis {
     background-image: url(assets/Asset%201@0.5x.png);
+    position: absolute;
+    z-index: 4;
+    background-size: 600%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 7vw;
+    height: 10vw;
+}
+
+.haandVisPige {
+    background-image: url(assets/pigeh%C3%A6nder@0.5x.png);
     position: absolute;
     z-index: 4;
     background-size: 600%;

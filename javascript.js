@@ -69,23 +69,40 @@ function haandKopier() {
     //antalklik++ er til at tilføje et klik til at give class et unikt navn
 
     $(".haand").clone().removeClass("haand").addClass("haand" + antalKlik + "A").addClass("haand" + randomIntFromInterval(1, 6)).appendTo("#scene").css({
-        'top': randomIntFromInterval(20, 75) + '%',
-        'left': randomIntFromInterval(20, 75) + '%'
+        'top': randomIntFromInterval(4, 82) + '%',
+        'left': randomIntFromInterval(1, 75) + '%'
     }).on("click", haandKopier).show();
     //haand.clone er for at clone det, removeclass haand og derfor tilføje
 
     $(".haand").clone().removeClass("haand").addClass("haand" + antalKlik + "B").addClass("haand" + randomIntFromInterval(1, 6)).appendTo("#scene").css({
-        'top': randomIntFromInterval(10, 75) + '%',
-        'left': randomIntFromInterval(10, 75) + '%'
+        'top': randomIntFromInterval(4, 82) + '%',
+        'left': randomIntFromInterval(1, 75) + '%'
     }).on("click", haandKopier).show();
 
     $(".haand").clone().removeClass("haand").addClass("haand" + antalKlik + "C").addClass("haand" + randomIntFromInterval(1, 6)).appendTo("#scene").css({
-        'top': randomIntFromInterval(10, 75) + '%',
-        'left': randomIntFromInterval(10, 75) + '%'
+        'top': randomIntFromInterval(4, 82) + '%',
+        'left': randomIntFromInterval(1, 75) + '%'
     }).on("click", haandKopier).show();
 
 
 }
+
+function startSpilPige() {
+    console.log("spilstarted");
+    $(".trykstart").off("click", startSpilPige);
+    $(".trykstart").hide();
+
+    $("#baggrund").removeClass("trykstartside");
+
+    $("#hands").addClass("haandVisPige")
+    $("#hands").addClass("haand")
+    $("#baggrund").addClass("spilside");
+
+
+    $(".haand").on("click", haandKopier);
+
+}
+
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
