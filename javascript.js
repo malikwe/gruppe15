@@ -52,6 +52,7 @@ function tilIphone() {
     $("#dreng_sprite").removeClass("dreng_tagerbillede");
     $("#dreng_container").off("animationend", tilIphone);
 
+    $("#baggrund").addClass("iphone_baggrund");
     $("#knap").addClass("send_knap");
     $("#iphone_container").addClass("iphone_placering");
     $("#iphone_sprite").addClass("snapchat_tryk_send");
@@ -87,7 +88,7 @@ function drengOverrasket() {
 
 function startHistorie() {
     console.log("tryk på start");
-
+    $("#baggrund").removeClass("iphone_baggrund");
     $("#iphone_container").removeClass("iphone_placering");
     $("#iphone_sprite").removeClass("snapchat_send");
 
@@ -228,7 +229,7 @@ function tilIphonePige() {
     $("#pige_container").off("animationend", tilIphonePige);
 
 
-
+    $("#baggrund").addClass("iphone_baggrund");
     $("#knap").addClass("send_knap");
     $("#iphone_container").addClass("iphone_placering");
     $("#iphone_sprite_pige").addClass("snapchat_tryk_send");
@@ -256,6 +257,7 @@ function pigeOverrasket() {
 
 function startHistoriePige() {
     console.log("startside")
+    $("#baggrund").removeClass("iphone_baggrund");
     $("#iphone_container").removeClass("iphone_placering");
     $("#iphone_sprite_pige").removeClass("snapchat_send");
 
