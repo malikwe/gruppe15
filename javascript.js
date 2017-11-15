@@ -34,7 +34,9 @@ function vedKlikDreng() {
 
     $("#dreng_container").addClass("dreng_startposition");
     $("#dreng_sprite").addClass("dreng_tagerbillede");
-
+    setTimeout(function () {
+        new Audio('assets/lyde/camera_shutter.mp3').play();
+    }, 1700);
     $("#dreng_container").on("animationend", tilIphone);
 
 
@@ -70,7 +72,9 @@ function trykSend() {
 
 
     $("#iphone_sprite").addClass("snapchat_send");
-
+    setTimeout(function () {
+        new Audio('assets/lyde/snapchat_notification.mp3').play();
+    }, 3000);
     $("#iphone_container").on("animationend", drengOverrasket);
 
 }
