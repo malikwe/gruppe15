@@ -4,7 +4,7 @@ $(window).on("load", sidenErLoadet);
 function sidenErLoadet() {
     console.log("siden er loadet");
 
-
+    $(".trykstart").hide();
     $("#baggrund").addClass("startsite");
     $("#dreng_container").addClass("dreng_startposition1");
     $("#dreng_sprite").addClass("dreng_startanimation");
@@ -102,7 +102,7 @@ function startHistorie() {
 
     $("#iphone_container").off("animationend", startHistorie);
 
-
+    $(".trykstart").show();
     $("#baggrund").addClass("trykstartside");
     $(".trykstart").on("click", startSpil);
 }
@@ -291,6 +291,7 @@ function pigeOverrasket() {
 
 function startHistoriePige() {
     console.log("startside")
+    $(".trykstart").show();
     $("#baggrund").removeClass("iphone_baggrund");
     $("#iphone_container").removeClass("iphone_placering");
     $("#iphone_sprite_pige").removeClass("snapchat_send");
