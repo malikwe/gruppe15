@@ -223,7 +223,7 @@
 }
 
 #iphone_sprite_pige {
-    background-image: url(assets/snapchat/Snapchat_animation_pige_endelig-01.svg);
+    background-image: url(assets/snapchat/snapchat_animation_pige-01.svg);
     background-size: 400%;
 }
 
@@ -348,8 +348,8 @@
 /** DRENG OVERRASKET SLUT **/
 
 .pige_overrasket {
-    width: 34.5vw;
-    height: 44.0vw;
+    width: 33.5vw;
+    height: 44vw;
     background-position: 0 -200%
 }
 

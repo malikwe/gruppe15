@@ -70,7 +70,9 @@ function trykSend() {
     $("#knap").removeClass("send_knap");
 
 
-
+    setTimeout(function () {
+        new Audio('assets/lyde/sentmessage.mp3').play();
+    }, 1000);
     $("#iphone_sprite").addClass("snapchat_send");
     setTimeout(function () {
         new Audio('assets/lyde/snapchat_notification.mp3').play();
@@ -82,7 +84,9 @@ function trykSend() {
 function drengOverrasket() {
     $("#iphone_container").off("animationend", drengOverrasket);
 
-
+    setTimeout(function () {
+        new Audio('assets/lyde/overrasket.mp3').play();
+    }, 500);
     $("#dreng_container").addClass("dreng_overrasket_position");
     $("#dreng_sprite").addClass("dreng_overrasket_animation");
     $("#dreng_sprite").addClass("dreng_overrasket");
@@ -120,19 +124,31 @@ function startSpil() {
     $("#baggrund").addClass("spilside");
     $("#time").addClass("time_animation");
 
+
+
     $(".haand").on("click", haandKopier);
     setTimeout(efterAnimationCountdown, 15000);
+}
+
+function kliksound() {
+    setTimeout(function () {
+        new Audio('assets/lyde/klik.mp3').play();
+    }, );
 }
 
 function haandKopier() {
 
     console.log("haandKopier" + antalKlik);
+    setTimeout(function () {
+        new Audio('assets/lyde/klik.mp3').play();
+    }, );
     $(this).off("click", haandKopier);
     $(this).hide();
     antalKlik++;
     //this hide er til at gemme den man klikker på.
     //this off click er for at slukke click fra f startspil
     //antalklik++ er til at tilføje et klik til at give class et unikt navn
+
 
     $(".haand").clone().removeClass("haand").addClass("haand" + antalKlik + "A").addClass("haand" + randomIntFromInterval(1, 6)).appendTo("#scene").css({
         'top': randomIntFromInterval(4, 82) + '%',
@@ -219,8 +235,12 @@ function vedKlikPige() {
 
     $("#pige_container").addClass("dreng_startposition");
     $("#pige_sprite").addClass("dreng_tagerbillede");
+    setTimeout(function () {
+        new Audio('assets/lyde/camera_shutter.mp3').play();
+    }, 1700);
 
     $("#pige_container").on("animationend", tilIphonePige);
+
 
 }
 
@@ -246,13 +266,23 @@ function trykSendPige() {
     $("#iphone_sprite_pige").removeClass("snapchat_tryk_send");
     $(".send_knap").off("click", trykSendPige);
 
+
+    setTimeout(function () {
+        new Audio('assets/lyde/sentmessage.mp3').play();
+    }, 1000);
     $("#iphone_sprite_pige").addClass("snapchat_send");
+    setTimeout(function () {
+        new Audio('assets/lyde/snapchat_notification.mp3').play();
+    }, 3000);
     $("#iphone_container").on("animationend", pigeOverrasket);
 }
 
 function pigeOverrasket() {
     console.log("Screenshot bliver taget")
     $("#iphone_container").off("animationend", pigeOverrasket);
+    setTimeout(function () {
+        new Audio('assets/lyde/overrasket.mp3').play();
+    }, );
 
     $("#pige_container").addClass("dreng_overrasket_position");
     $("#pige_sprite").addClass("pige_overrasket");
