@@ -108,7 +108,7 @@
     height: 44.5vw;
     animation-name: tagerbillede_kf;
     animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: ;
     animation-timing-function: steps(2);
 }
 
@@ -206,11 +206,14 @@
 
 /** SNAPCHAT ANIMATION START **/
 
-/**  PIGE SNAPCHAT ANIMATION START **/
-
 #iphone_container {
     position: absolute;
     z-index: 3;
+}
+
+#iphone_sprite {
+    background-image: url(assets/snapchat/Snapchat_animation_dreng-01.svg);
+    background-size: 400%;
 }
 
 #iphone_sprite_pige {
@@ -223,61 +226,63 @@
     left: 30vw;
 }
 
-.snapchat_send {
+.snapchat_tryk_send {
+    background-position: 0%;
     width: 100vw;
     height: 56.22vw;
-    animation-name: snap_sendes_kf;
-    animation-duration: 5s;
-    /**animation-fill-mode:**/
-    animation-iteration-count: 1;
-    animation-timing-function: steps(4);
 }
 
-@keyframes snap_sendes_kf {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: -400%;
-    }
+#knap {
+    background-image: url(assets/sendknap.png);
+
 }
 
-
-/** PIGE SNAPCHAT ANIMATION SLUT **/
-
-/** DRENG SNAPCHAT ANIMATION **/
-
-#iphone_container {
+.send_knap {
+    width: 5vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
     position: absolute;
+    top: 75.7%;
+    left: 44.8%;
     z-index: 3;
+    animation-name: send_knap_kf;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-duration: 1s;
 }
 
-#iphone_sprite {
-    background-image: url(assets/snapchat/Snapchat_animation_dreng-01.svg);
-    background-size: 400%;
+@keyframes send_knap_kf {
+    100% {
+        transform: scale(1.2);
+    }
 }
 
-.iphone_placering {
-    top: 10%;
-    left: 30vw;
+}
+
+.snapchat_screenshot {
+    width: 100vw;
+    height: 56.22vw;
+    background-position: -100%;
+
 }
 
 .snapchat_send {
     width: 100vw;
     height: 56.22vw;
     animation-name: snap_sendes_kf;
-    animation-duration: 5s;
+    animation-duration: 3s;
     /**animation-fill-mode:**/
-    animation-iteration-count: 1;
-    animation-timing-function: steps(4);
+    animation-timing-function: steps(2);
+    animation-fill-mode: forwards;
 }
 
 @keyframes snap_sendes_kf {
     0% {
-        background-position: 0%;
+        background-position: -100%;
     }
     100% {
-        background-position: -400%;
+        background-position: -300%;
     }
 }
 
@@ -292,6 +297,26 @@
 
 .dreng_overrasket {
     background-position: -100% -300%;
+}
+
+#output {
+    z-index: 3;
+    color: #f4912d;
+    font-family: roboto;
+}
+
+.number_game {
+    position: absolute;
+    font-size: 7vw;
+    left: 90%;
+    top: 10%;
+}
+
+.number_side {
+    position: absolute;
+    font-size: 9vw;
+    left: 46%;
+    top: 44%;
 }
 
 .dreng_overrasket_animation {
@@ -315,6 +340,13 @@
 
 
 /** DRENG OVERRASKET SLUT **/
+
+.pige_overrasket {
+    width: 34.5vw;
+    height: 44.0vw;
+    background-position: 0 -200%
+}
+
 
 /** SPILLET STARTER **/
 
@@ -341,6 +373,66 @@
 
 .trykstartside {
     background-image: url(assets/afslutning/tryk_start.svg);
+}
+
+#time {
+    background-color: greenyellow;
+    z-index: 3;
+}
+
+.time_animation {
+    width: 15vw;
+    height: 2vw;
+    position: absolute;
+    top: 5%;
+    left: 84%;
+    animation-name: time_animation_kf;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}
+
+@keyframes time_animation_kf {
+    100% {
+        width: 0.1vw;
+    }
+}
+
+#pil {
+    background-image: url(assets/pil.svg);
+}
+
+.trykpil {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    z-index: 3;
+    top: 78%;
+    left: 46%;
+}
+
+#link {
+    z-index: 3;
+    position: absolute;
+}
+
+.privatsnaklink {
+    width: 20vw;
+    height: 15.3vw;
+    top: 65.62%;
+    left: 44%;
+}
+
+#replay {
+    z-index: 3;
+    position: absolute;
+}
+
+.replayknap {
+
+    width: 19vw;
+    height: 15.3vw;
+    top: 65.62%;
+    left: 73%;
 }
 
 #spil {
